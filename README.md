@@ -1,6 +1,8 @@
 # Orion: Alien Breach
 
-A self-contained first-person alien shooter set on the stranded spaceship Orion.
+A browser-based first-person alien shooter set on the stranded spaceship Orion.
+
+The current build uses Three.js from a CDN for real 3D rendering, so the page needs internet access unless you later vendor the library locally.
 
 ## Play
 
