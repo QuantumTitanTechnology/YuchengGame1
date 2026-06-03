@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orion: Alien Breach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <canvas id="gameCanvas" width="1280" height="720" aria-label="Orion Alien Breach game canvas"></canvas>
+
+      <section id="startPanel" class="overlay-panel">
+        <p class="eyebrow">Deep Space Distress Log</p>
+        <h1>ORION</h1>
+        <p>
+          Your ship is adrift beyond beacon range. GPS is offline. Something has breached the lower deck.
+        </p>
+        <button id="startButton" type="button">Start Mission</button>
+      </section>
+
+      <section id="endPanel" class="overlay-panel is-hidden">
+        <p id="endEyebrow" class="eyebrow">Mission Ended</p>
+        <h2 id="endTitle">You survived Orion</h2>
+        <p id="endCopy"></p>
+        <button id="restartButton" type="button">Restart</button>
+      </section>
+
+      <div class="hud" aria-hidden="true">
+        <div class="status-block">
+          <span class="label">SHIP</span>
+          <strong>ORION</strong>
+        </div>
+        <div class="status-block">
+          <span class="label">GPS</span>
+          <strong class="danger">OFFLINE</strong>
+        </div>
+        <div class="status-block wide">
+          <span class="label">HEALTH</span>
+          <div class="bar"><i id="healthBar"></i></div>
+        </div>
+        <div class="status-block">
+          <span class="label">AMMO</span>
+          <strong id="ammoReadout">12 / 36</strong>
+        </div>
+        <div class="status-block">
+          <span class="label">HOSTILES</span>
+          <strong id="alienReadout">0</strong>
+        </div>
+      </div>
+
+      <div id="message" class="message" aria-live="polite">Distress channel: awaiting manual override.</div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
